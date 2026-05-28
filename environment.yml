@@ -1,0 +1,12 @@
+name: AI_models
+channels:
+    - fastai
+    - pytorch
+    - defaults
+dependencies:
+  - python=3.14
+  - pytorch>=2.0
+  - torchvision
+  - pip
+  - pip:
+    - -r requirements.txt
