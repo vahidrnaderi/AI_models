@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 jupyter server extension enable voila.server_extension --sys-prefix
+chmod +x start
 
 # CONDA_PREFIX is not always set during Binder's postBuild; use the active Python env.
 python - <<'PY'

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+cd "${HOME:-/home/jovyan}"
+exec python -m voila 01_cat_or_dog.ipynb \
+  --port="${PORT:-8888}" \
+  --Voila.ip=0.0.0.0 \
+  --no-browser
