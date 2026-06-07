@@ -1,12 +1,14 @@
 name: AI_models
 channels:
-    - fastai
-    - pytorch
-    - defaults
+  - fastai
+  - pytorch
+  - conda-forge
 dependencies:
   - python=3.10
+  - fastai
   - pytorch
   - torchvision
+  - ipywidgets
   - pip
   - pip:
     - -r requirements.txt

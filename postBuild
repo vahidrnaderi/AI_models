@@ -1,3 +1,5 @@
 #!/bin/bash
 set -e
 jupyter server extension enable voila.server_extension --sys-prefix
+mkdir -p "${CONDA_PREFIX}/etc/jupyter/jupyter_server_config.d"
+cp etc/jupyter/jupyter_server_config.d/voila.json "${CONDA_PREFIX}/etc/jupyter/jupyter_server_config.d/voila.json"
