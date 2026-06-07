@@ -1,5 +1,16 @@
 #!/bin/bash
 set -e
 jupyter server extension enable voila.server_extension --sys-prefix
-mkdir -p "${CONDA_PREFIX}/etc/jupyter/jupyter_server_config.d"
-cp etc/jupyter/jupyter_server_config.d/voila.json "${CONDA_PREFIX}/etc/jupyter/jupyter_server_config.d/voila.json"
+
+# CONDA_PREFIX is not always set during Binder's postBuild; use the active Python env.
+python - <<'PY'
+import shutil
+import sys
+from pathlib import Path
+
+src = Path("etc/jupyter/jupyter_server_config.d/voila.json")
+dest_dir = Path(sys.prefix) / "etc/jupyter/jupyter_server_config.d"
+dest_dir.mkdir(parents=True, exist_ok=True)
+shutil.copy(src, dest_dir / src.name)
+print(f"Installed Voilà config to {dest_dir / src.name}")
+PY
