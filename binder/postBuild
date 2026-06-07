@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+jupyter server extension enable voila.server_extension --sys-prefix
