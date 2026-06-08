@@ -7,7 +7,6 @@ export CUDA_VISIBLE_DEVICES=""
 export OMP_NUM_THREADS=2
 export MKL_NUM_THREADS=2
 
-exec python -m voila 01_cat_or_dog.ipynb \
-  --port="${PORT}" \
-  --Voila.ip=0.0.0.0 \
-  --no-browser
+# Use jupyterhub-singleuser so Binder's /api health check passes quickly.
+# Voilà opens via ServerApp.default_url in etc/jupyter/.../voila.json.
+exec jupyterhub-singleuser

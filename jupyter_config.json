@@ -1,9 +1,13 @@
 {
+  "ServerApp": {
+    "default_url": "/voila/render/01_cat_or_dog.ipynb"
+  },
   "TagRemovePreprocessor": {
     "enabled": true,
     "remove_cell_tags": ["hide"]
   },
   "VoilaConfiguration": {
-    "show_tracebacks": true
+    "show_tracebacks": true,
+    "progressive_rendering": true
   }
 }

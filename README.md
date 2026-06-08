@@ -16,6 +16,12 @@ Pinned deps are in `requirements.txt` (`fastai`, `ipywidgets`, `voila`).
 
 https://mybinder.org/v2/gh/vahidrnaderi/AI_models/main
 
-Binder builds from `environment.yml` (Python 3.10, CPU-only PyTorch + conda `fastai`). The `start` script launches Voilà automatically — leave **File** as default on mybinder.org.
+Binder builds from `environment.yml` (Python 3.10, CPU-only PyTorch + conda `fastai`). The server starts with `jupyterhub-singleuser` and opens Voilà via `default_url` — leave **File** as default on mybinder.org.
 
-First launch rebuilds the image (~5–15 min). A **424 error** after a successful build usually means the session crashed at startup (often out-of-memory) — open the link again for a fresh session.
+Alternative direct Voilà URL:
+
+```
+?urlpath=voila%2Frender%2F01_cat_or_dog.ipynb
+```
+
+First launch rebuilds the image (~5–15 min). Loading the model can take another minute after the page opens.
