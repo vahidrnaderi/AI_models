@@ -1,4 +1,9 @@
-fastai==2.8.7
-ipywidgets==8.1.8
-voila==0.5.12
-jupyterlab-widgets
+fastai>=2.0.0
+ipywidgets
+# graphviz
+# matplotlib
+# nbdev>=0.2.12
+# pandas
+# scikit_learn
+# azure-cognitiveservices-search-imagesearch
+# sentencepiece
