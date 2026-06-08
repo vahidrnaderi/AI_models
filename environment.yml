@@ -1,14 +1,11 @@
 name: AI_models
 channels:
-  - conda-forge
   - pytorch
+  - conda-forge
 dependencies:
   - python=3.12
   - pytorch>=2.4
   - torchvision
-  - pillow>=10
-  - jpeg
-  - libtiff=4.4
   - pip
   - pip:
     - -r requirements.txt
