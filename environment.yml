@@ -1,13 +1,15 @@
+# Binder build environment (Python 3.10). For local Python 3.14 use environment.local.yml.
 name: AI_models
 channels:
   - fastai
   - pytorch
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.14.4
+  - python=3.10
+  - fastai
   - pytorch
   - torchvision
+  - ipywidgets
   - pip
   - pip:
-    - -r requirements.txt
+    - -r requirements-binder.txt

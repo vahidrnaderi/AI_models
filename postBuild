@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
-jupyter server extension enable voila.server_extension --sys-prefix
-jupyter server extension enable jupyterlab_widgets --sys-prefix
+python -m jupyter server extension enable voila.server_extension --sys-prefix
+python -m jupyter server extension enable jupyterlab_widgets --sys-prefix 2>/dev/null \
+  || python -m jupyter server extension enable widgetsnbextension --sys-prefix 2>/dev/null \
+  || true
 chmod +x start
 
 python - <<'PY'
