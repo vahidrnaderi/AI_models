@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 cd "${HOME:-/home/jovyan}"
+
+# Binder has no GPU; avoid CUDA init and limit thread memory use.
+export CUDA_VISIBLE_DEVICES=""
+export OMP_NUM_THREADS=2
+export MKL_NUM_THREADS=2
+
 exec python -m voila 01_cat_or_dog.ipynb \
-  --port="${PORT:-8888}" \
+  --port="${PORT}" \
   --Voila.ip=0.0.0.0 \
-  --no-browser \
-  --progressive_rendering=True
+  --no-browser
