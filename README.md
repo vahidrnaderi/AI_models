@@ -25,3 +25,6 @@ Alternative direct Voilà URL:
 ```
 
 First launch rebuilds the image (~5–15 min). Loading the model can take another minute after the page opens.
+
+
+https://mybinder.org/v2/gh/vahidrnaderi/AI_models/cat-vs-dog-python-3-12-original-for-binder?urlpath=%2Fvoila%2Frender%2F00_cat_or_dog.ipynb
