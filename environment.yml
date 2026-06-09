@@ -1,0 +1,11 @@
+name: AI_models
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pytorch>=2.4
+  - torchvision
+  - pip
+  - pip:
+    - -r requirements.txt

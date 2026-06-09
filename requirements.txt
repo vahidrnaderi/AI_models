@@ -1,0 +1,4 @@
+fastai==2.8.7
+ipywidgets
+ipykernel
+voila
